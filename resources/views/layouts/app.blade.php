@@ -43,7 +43,7 @@
                         </form><br><br>
                     @endguest
                     <a class="no-underline hover:underline" href="{{ url('/messages') }}">Messages</a>
-                    <a class="no-underline hover:underline" href="{{ url('/messages/create') }}">Create Content</a>
+                    <a class="no-underline hover:underline" href="{{ url('/messages/create') }}">Create Messages</a>
                 </nav>
             </div>
         </header>

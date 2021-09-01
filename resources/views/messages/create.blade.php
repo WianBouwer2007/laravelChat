@@ -44,17 +44,23 @@
                         </form><br><br>
                     @endguest
                     <a class="no-underline hover:underline" href="{{ url('/messages') }}">Messages</a>
-                    <a class="no-underline hover:underline" href="{{ url('/home') }}">User Page</a>
+                    <a class="no-underline hover:underline" href="{{ url('/home') }}">Home</a>
                 </nav>
             </div>
         </header>
-    <h1 style="font-size:20px; text-align:center;margin-top:5em;padding-bottom:2em;" >Create Content</h1>
+    <h1 style="font-size:20px; text-align:center;margin-top:5em;padding-bottom:2em;" >Create Message</h1>
     
-    <form action="{{ route('messages.store') }}" method="POST">
+    <form action="{{ route('messages.store') }}" method="POST" style="text-align:center;">
         @csrf
-        <input type="text" id="name" name="name" required>
-        <input type="textarea" id="content" name="content" required>
-        <button type="submit" id="submit">Send Message</button>
+        <div class="form-group">
+        
+            <input type="text" id="name" name="name" class="form-control" placeholder="Name" required style="padding:10px;border: 1px solid black;margin-top: 2em;margin-bottom: 2em;">
+        </div>
+        <div class="form-group">
+            
+            <input type="textarea" id="content" name="content" class="form-control" placeholder="Content" required style="padding:10px;border: 1px solid black;margin-bottom: 2em;">
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary" style="border: 1px solid;padding: 10px;background: green;color: white;">Send Message</button>
     </form>
 </body>
 </html>
