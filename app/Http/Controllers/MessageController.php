@@ -13,7 +13,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        return view('messages.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        //
+        return view('messages.create');
     }
 
     /**
