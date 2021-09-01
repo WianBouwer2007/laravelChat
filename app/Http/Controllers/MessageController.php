@@ -34,7 +34,12 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //$message = chatMessage::create($request);
+        $message = new chatMessage();
+        $message -> name = $request -> input('name');
+        $message -> content = $request -> input('content');
+        $message -> save();
+        return redirect()->route('messages.index');
     }
 
     /**

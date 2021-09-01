@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>Create Content</h1>
+    <form action="{{ route('messages.store') }}" method="POST">
+        @csrf
+        <input type="text" id="name" name="name" required>
+        <input type="textarea" id="content" name="content" required>
+        <button type="submit" id="submit">Send Message</button>
+    </form>
 </body>
 </html>
