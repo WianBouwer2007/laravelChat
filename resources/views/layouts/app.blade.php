@@ -21,7 +21,7 @@
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
                     <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Test') }}
                         
                     </a>
                 </div>
@@ -40,8 +40,10 @@
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             {{ csrf_field() }}
-                        </form>
+                        </form><br><br>
                     @endguest
+                    <a class="no-underline hover:underline" href="{{ url('/messages') }}">Messages</a>
+                    <a class="no-underline hover:underline" href="{{ url('/messages/create') }}">Create Content</a>
                 </nav>
             </div>
         </header>
