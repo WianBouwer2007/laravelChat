@@ -30,7 +30,7 @@ Route::get('/messages/create', [\App\Http\Controllers\MessageController::class, 
         ->name('create'); 
 
  Route::get('/store', [\App\Http\Controllers\MessageController::class, 'store'])
-        ->name('store'); 
+        ->name('store'); //
 
 
 Route::resource('messages', MessageController::class)->only('create','store');
