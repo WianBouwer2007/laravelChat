@@ -32,7 +32,7 @@
         <div class="flex flex-col justify-around h-full">
             <div>
                 <h1 class="mb-6 text-gray-600 text-center font-light tracking-wider text-4xl sm:mb-8 sm:text-6xl">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Please login for test') }}
                 </h1>
                 <p>Willem test please log in to view the contact form</p>
             </div>
