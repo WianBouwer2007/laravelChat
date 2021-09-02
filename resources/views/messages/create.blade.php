@@ -54,7 +54,7 @@
         @csrf
         <div class="form-group">
         
-            <input type="text" id="name" name="name" class="form-control" placeholder="Name" required style="padding:10px;border: 1px solid black;margin-top: 2em;margin-bottom: 2em;">
+            <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" readonly="readonly" class="form-control" placeholder="Name" required style="padding:10px;border: 1px solid black;margin-top: 2em;margin-bottom: 2em;">
         </div>
         <div class="form-group">
             

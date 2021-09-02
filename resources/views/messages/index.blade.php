@@ -66,7 +66,7 @@
 <form action="{{ route('messages.destroy', ['message' => $message->id] ) }}" method="POST">
     @csrf
     @method('DELETE')
-<p style="text-align:center;padding-bottom:10px;border-bottom:1px solid black; color:red;"><button type="submit" value="Delete" >Delete</button></p>
+<p style="text-align:center;padding-bottom:10px;border-bottom:1px solid black;"><button type="submit" style=" background: #d46464;color: white;padding: 10px;border-radius: 10px;" value="Delete" >Delete</button></p>
 </form>
     </div>
     @endforeach
