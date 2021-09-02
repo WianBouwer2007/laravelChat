@@ -23,15 +23,15 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])
         ->name('home');
         
 
-Route::get('/messages', [\App\Http\Controllers\MessageController::class, 'index'])
+/*Route::get('/messages', [\App\Http\Controllers\MessageController::class, 'index'])
         ->name('messages'); 
         
 Route::get('/messages/create', [\App\Http\Controllers\MessageController::class, 'create'])
         ->name('create'); 
 
- Route::get('/store', [\App\Http\Controllers\MessageController::class, 'store'])
-        ->name('store'); //
+Route::get('/store', [\App\Http\Controllers\MessageController::class, 'store'])
+        ->name('store'); 
+*/
 
-
-Route::resource('messages', MessageController::class)->only('create','store');
+Route::resource('messages', MessageController::class);
 

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\ChatMessage;
+
 
 use Illuminate\Http\Request;
 
@@ -13,7 +15,8 @@ class MessageController extends Controller
      */
     public function index()
     {
-        return view('messages.index');
+        //dd(ChatMessage::all());
+        return view('messages.index', ['messages' => ChatMessage::all()]);
     }
 
     /**
@@ -35,7 +38,7 @@ class MessageController extends Controller
     public function store(Request $request)
     {
         //$message = chatMessage::create($request);
-        $message = new chatMessage();
+        $message = new ChatMessage();
         $message -> name = $request -> input('name');
         $message -> content = $request -> input('content');
         $message -> save();

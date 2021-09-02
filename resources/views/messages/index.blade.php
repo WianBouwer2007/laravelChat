@@ -54,6 +54,19 @@
         @yield('content')
     </div>
 
-    <h2 style="text-align: center;margin-top: 10em;">This is the messages Page<h2>
+    
+    @foreach ($messages as $key => $message)
+
+        <div>
+            <p style="text-align:center;padding-bottom:10px;padding-top:10px;margin-top:10px;">Name: {{ $message['name'] }}</p>
+        </div>
+        <div>
+        <p style="text-align:center;padding-bottom:10px;border-bottom:1px solid black;">User Message: {{ $message['content'] }}
+</p>
+    </div>
+    @endforeach
+    @empty($messages)
+        <div>There are no posts to display</div>
+    @endempty
 </body>
 </html>
