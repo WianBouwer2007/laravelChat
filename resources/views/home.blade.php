@@ -19,8 +19,14 @@
             <div class="w-full p-6">
                 <p class="text-gray-700">
                     You are logged in {{ Auth::user()->name }}! 
-                </p><br>
-                <p>Welcome to the test page created</p><br>
+                </p><br><br>
+                <p style="border-top:1px solid grey;padding-top:30px;">Welcome to the test page created</p><br>
+                <p>Navigation is created for the different pages ontop in menu called</p><br>
+                <ul>
+                    <li>Messages</li>
+                    <li>Create Messages</li>
+                    <li>Home</li>
+                </ul>
           
 </main>
 @endsection
