@@ -58,13 +58,19 @@
     @foreach ($messages as $key => $message)
 
         <div>
-            <p style="text-align:center;padding-bottom:10px;padding-top:10px;margin-top:10px;">Name: {{ $message['name'] }}</p>
+            <p style="text-align:center;padding-bottom:10px;padding-top:10px;margin-top:10px;">{{ $message['name'] }}</p>
         </div>
         <div>
-        <p style="text-align:center;padding-bottom:10px;border-bottom:1px solid black;">User Message: {{ $message['content'] }}
+        <p style="text-align:center;padding-bottom:10px;">{{ $message['content'] }}
 </p>
+<form action="{{ route('messages.destroy', ['message' => $message->id] ) }}" method="POST">
+    @csrf
+    @method('DELETE')
+<p style="text-align:center;padding-bottom:10px;border-bottom:1px solid black; color:red;"><button type="submit" value="Delete" >Delete</button></p>
+</form>
     </div>
     @endforeach
+
     @empty($messages)
         <div>There are no posts to display</div>
     @endempty
